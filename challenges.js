@@ -187,7 +187,16 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
+function range (int1, int2){
+  let newRange = []
+  if(int1 > int2) {
+    return 'First argument must be less than second'
+  } 
+  for(let i = int1; i < int2; i++){
+  newRange.push(i)
+  } 
+  return newRange
+}
 
 
 
