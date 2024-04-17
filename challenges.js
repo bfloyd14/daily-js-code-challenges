@@ -153,8 +153,15 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
-
-
+function computeRemainder(num1, num2){
+  let remainder 
+  if(num2 === 0){
+    remainder =  Infinity
+  } else {
+    remainder = num1 % num2
+  }
+  return remainder
+}
 
 
 /*-----------------------------------------------------------------------------
