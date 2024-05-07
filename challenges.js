@@ -288,7 +288,18 @@ charCount('Today is fantastic!')
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-
+function charCount(str){
+  let countObj = {}
+  for(let i = 0; i < str.length; i++){
+    if (countObj.hasOwnProperty(str[i])){
+      countObj[str[i]] += 1
+    }
+    else{
+      countObj[str[i]] = 1
+    }
+  }
+  return countObj
+}
 
 
 
