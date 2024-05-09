@@ -329,7 +329,18 @@ formatWithPadding(1234, '*', 3) //=> "1234"
 -----------------------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-
+const formatWithPadding = (pad, str, padLeft) =>{
+  const numToStr = pad.toString()
+  let result 
+  if (numToStr.length >= padLeft){
+    result = numToStr
+  } else {
+  result = numToStr.padStart(padLeft, str)
+  }
+  return result
+  
+}
+formatWithPadding(42, '*', 10) 
 
 
 
