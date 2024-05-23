@@ -368,6 +368,23 @@ isPalindrome('') //=> true
 -----------------------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
+function isPalindrome(str){
+  let length = str.length
+  let reverseStr = str.split('').reverse().join('').toLowerCase().replaceAll(' ', '')
+  let forwardStr = str.toLowerCase().replaceAll(' ', '')
+  // console.log('A nut for a jar of tuna'.split('').reverse().join('').toLowerCase().replaceAll(' ', ''))
+  // console.log('A nut for a jar of tuna'.toLowerCase().replaceAll(' ',''))
+
+    if(length <= 1){
+    return true
+  } else if(
+    forwardStr === reverseStr
+  ){
+    return true
+  } else {
+    return false
+  }
+}
 
 
 
@@ -397,6 +414,23 @@ hammingDistance('!!!!', '****') //=> 4
 hammingDistance('abc', 'ab') //=> NaN
 -----------------------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
+function hammingDistance(str1, str2){
+
+  if(str1.length !== str2.length){
+    return NaN
+  }else{
+    let result = 0
+    const arr1 = str1.split('')
+    const arr2 = str2.split('')
+
+    for(let i=0; i < arr1.length; i++){
+      if(arr1[i] !== arr2[i]){
+        result ++
+      }
+    }
+    return result
+  }
+}
 
 
 
@@ -424,7 +458,13 @@ mumble('121') //=> '1-22-111'
 mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
+function mumble(str){
+  const arr1 = str.split('')
 
+  const result = arr1.map((char, index) => (char + char.repeat(index)))
+
+  return result.join('-')
+}
 
 
 
