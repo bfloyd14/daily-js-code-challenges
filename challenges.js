@@ -619,7 +619,17 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 -----------------------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
+function mapArray(arr, func){
+  console.log(arr)
+let result = []
 
+  arr.forEach((str, idx) => {
+    console.log(idx)
+    console.log(str)
+    result.push(func(str, idx))
+  })
+  return result
+}
 
 
 
