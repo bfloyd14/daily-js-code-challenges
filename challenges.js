@@ -711,7 +711,13 @@ isPrime(200) //=> false
 -----------------------------------------------------------------------------*/
 // Your solution for 19-isPrime here:
 
-
+const isPrime = num => {
+  if(num % 1 !== 0) return false;
+  for(let i = 2, s = Math.sqrt(num); i <= s; i++) {
+      if(num % i === 0) return false
+  }
+  return num > 1
+}
 
 
 
