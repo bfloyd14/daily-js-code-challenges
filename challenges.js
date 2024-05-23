@@ -531,7 +531,6 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44})
 
 function mergeObjects(obj1, obj2, ...objs){
   let combineObject = Object.assign(obj1, obj2, ...objs)
-  console.log(combineObject)
   return combineObject
 }
 
@@ -575,7 +574,15 @@ findHighestPriced([
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
 
+function findHighestPriced(array){
 
+  let highNum = 0
+  array.forEach(obj => {
+    if(obj.price > highNum) highNum = obj.price
+  })
+
+  return array.find(obj => obj.price === highNum)
+}
 
 
 
